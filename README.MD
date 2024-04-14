@@ -64,3 +64,38 @@ Response Entity will have lot of things.
 #### Custom Exception
 ![CustomExceptions](assets/CustomExceptions.png)
 
+# Step - 3 : DataBase
+
+#### Topics Covered :
+- JPA 
+- ORM 
+- JPA Interface
+- Hibernate
+- JDBC Interface : Java DataBase Connectivity
+
+#### JPA : Java Persistance Api
+- Creates tables
+- All CRUD operations
+
+![JPA WorkFlow](assets/JpaWorkFlow.png)
+
+#### ORM : Object Relational Mapping 
+- Provides us an easy way to work with Database based on models that are present in your codebase.
+- Can automatically create table for models
+- CRUD
+
+##### Add Dependencies and Configure application.properties
+
+- MVN Repository . com
+- Search Spring starter JPA
+- copy and add in the pom.xml
+- Remove the version [ as it is a spring library, spring will automatically detect the version]
+- Also add mysql connector dependency 
+- Don't remove version. [ because this is not a spring lib. Hence spring can't able to detect it version if not provided ]
+- From the spring Official documentation add the required configurations to the application.properties
+- Create a new Database and user in the Mysql Workbench
+- Update the database name and username in the application.properties
+- Connect the database to Intellij
+
+#### Cardinality
+- Relation between two Tables
