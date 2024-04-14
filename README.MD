@@ -99,3 +99,12 @@ Response Entity will have lot of things.
 
 #### Cardinality
 - Relation between two Tables
+
+#### Add Annotations and Cardinality
+- Every Model should have a Database.
+- Add Entity annotation to tell spring to create database.
+- Also add "Id" annotation
+- Put appropiate Cardinality annotation to show Links between databases.
+
+#### Databases are created.
+![DatabasesCreated](assets/DatabasesCreated.png)
