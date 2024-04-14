@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor  // All Arguments Constructor
-@NoArgsConstructor
+@NoArgsConstructor   // No Argument Constructor ( Default Constructor )
 public class Product {
     private Long id;
     private String title;
