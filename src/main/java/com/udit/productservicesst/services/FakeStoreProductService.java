@@ -11,8 +11,8 @@ import org.springframework.web.client.RestTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component   // initialise an object of this class, in the start of the program
-//@Service
+//@Component   // initialise an object of this class, in the start of the program
+@Service("fakeStoreProductService")
 public class FakeStoreProductService implements ProductService{
 
     @Override
@@ -39,6 +39,11 @@ public class FakeStoreProductService implements ProductService{
             products.add(convertFakeStoreDtosToProduct(fakeStoreProductDto));
         }
         return products;
+    }
+
+    @Override
+    public Product createProduct(Product product) {
+        return null;
     }
 
     private Product convertFakeStoreDtosToProduct( FakeStoreProductDto fakeStoreProductDto ){

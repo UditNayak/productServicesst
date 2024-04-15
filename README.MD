@@ -72,6 +72,7 @@ Response Entity will have lot of things.
 - JPA Interface
 - Hibernate
 - JDBC Interface : Java DataBase Connectivity
+- Cardinality
 
 #### JPA : Java Persistance Api
 - Creates tables
@@ -108,3 +109,33 @@ Response Entity will have lot of things.
 
 #### Databases are created.
 ![DatabasesCreated](assets/DatabasesCreated.png)
+
+# Step - 4 : Repository Pattern
+
+#### Topics Covered
+- PostMapping @RequestBody
+- Upsert Operation
+- save() method for upsert operation
+- Primary Annotation && Qualifier Annotation
+- @GeneratedValue(strategy = GenerationType.AUTO)
+#### Repository Pattern
+
+- Code to interact with persistance(DB) layer should be separated from service layer.
+
+JpaRepository Interface expects two parameters : 
+1. Model
+2. DataType of the primary Key Attribute
+
+- In Database Primarykey is the unique name/Identifier (kind of aadhar card of the product)
+- Open-Closed Principle : Open for extension Closed for modification
+
+For creating and Updating operations Spring uses the save(Product p) for both.
+- If the input product object is having an id, then it is going to be an update.
+- If the input product object doesn't have an Id, then it is going to be a create product.
+- Update + Insert = Upsert operation
+
+#### http://localhost:8080/products  || POST
+![Create Product](assets/CreateProduct.png)
+![Product Table](assets/ProductTable.png)
+![Category Table](assets/CategoryTable.png)
+

@@ -36,12 +36,12 @@ public class GlobalExceptionHandler {          // name cane be Anything
         return response;
     }
 
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<ExceptionDto> handleGeneralException(){
-        ExceptionDto exceptionDto = new ExceptionDto();
-        exceptionDto.setMessage("Something went Wrong [ Controller Advice ] ");
-        exceptionDto.setResolution("General Exception");
-        ResponseEntity<ExceptionDto> response = new ResponseEntity<>(exceptionDto, HttpStatus.BAD_REQUEST);
-        return response;
-    }
+//    @ExceptionHandler(Exception.class)
+//    public ResponseEntity<ExceptionDto> handleGeneralException(){
+//        ExceptionDto exceptionDto = new ExceptionDto();
+//        exceptionDto.setMessage("Something went Wrong [ Controller Advice ] ");
+//        exceptionDto.setResolution("General Exception");
+//        ResponseEntity<ExceptionDto> response = new ResponseEntity<>(exceptionDto, HttpStatus.BAD_REQUEST);
+//        return response;
+//    }
 }
