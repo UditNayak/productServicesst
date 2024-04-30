@@ -1,5 +1,6 @@
 package com.udit.productservicesst.services;
 
+import com.udit.productservicesst.exceptions.CategoryNotFoundException;
 import com.udit.productservicesst.exceptions.ProductNotFoundException;
 import com.udit.productservicesst.models.Category;
 import com.udit.productservicesst.models.Product;
@@ -42,6 +43,10 @@ public class SelfProductService implements ProductService{
         }
         Product product1 =  productRepository.save(product);
         Optional<Category> optionalCategory = categoryRepository.findById(category.getId());
+        if( optionalCategory.isEmpty() ){
+            // The category that is passed in the input product is invalid.
+            throw new CategoryNotFoundException("Invalid category passed.");
+        }
         product1.setCategory(optionalCategory.get());
         return product1;
     }

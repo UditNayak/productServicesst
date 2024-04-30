@@ -24,18 +24,6 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public Product getProductById(@PathVariable("id") Long id){
-//          throw new RuntimeException("Something went Wrong in Controller");
-//        try{
-//            Product product = productService.getProductById(id);
-//            ResponseEntity<Product> responseEntity = new ResponseEntity<>(product, HttpStatus.OK);
-//            return responseEntity;
-//        }catch (RuntimeException exception){
-//            ExceptionDto exceptionDto = new ExceptionDto();
-//            exceptionDto.setMessage("Something Went Wront [ Through Exception DTO] ");
-//            exceptionDto.setResolution("DO Nothing, Tere Baska nehi hai Bhai.");
-//            ResponseEntity<ExceptionDto> responseEntity = new ResponseEntity<>(exceptionDto,HttpStatus.BAD_REQUEST);
-//            return responseEntity;
-//        }
         return productService.getProductById(id);
     }
 

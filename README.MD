@@ -117,7 +117,7 @@ Response Entity will have lot of things.
 - Upsert Operation
 - save() method for upsert operation
 - Primary Annotation && Qualifier Annotation
-- @GeneratedValue(strategy = GenerationType.AUTO)
+- @GeneratedValue(strategy = GenerationType.IDENTITY)
 #### Repository Pattern
 
 - Code to interact with persistance(DB) layer should be separated from service layer.
